@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad – FinanzasPlus</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2a2d3e;
+      --text: #e8eaf0;
+      --text-muted: #8b90a8;
+      --accent: #0ea5e9;
+      --accent-soft: rgba(14,165,233,0.12);
+      --green: #22c55e;
+      --green-soft: rgba(34,197,94,0.1);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 24px 24px;
+      text-align: center;
+    }
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .logo-icon {
+      width: 48px; height: 48px;
+      background: var(--accent-soft);
+      border: 1.5px solid var(--accent);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+    }
+    .logo-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+    .logo-name span { color: var(--accent); }
+    .badge {
+      display: inline-block;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 99px;
+      margin-bottom: 12px;
+    }
+    .header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      margin-bottom: 8px;
+    }
+    .header p {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+    .intro-card {
+      background: var(--green-soft);
+      border: 1px solid rgba(34,197,94,0.25);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-bottom: 32px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .intro-card .icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+    .intro-card p { font-size: 14px; color: #a7f3c5; }
+    section { margin-bottom: 36px; }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2 .num {
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    p { color: var(--text-muted); margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-bottom: 14px;
+    }
+    .card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card h3 .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .card p { font-size: 13.5px; }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+    ul li {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    ul li:last-child { border-bottom: none; }
+    ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 12px;
+    }
+    .highlight {
+      color: var(--text);
+      font-weight: 500;
+    }
+    .tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 6px;
+      margin-right: 4px;
+    }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      text-align: center;
+    }
+    .contact-card p { font-size: 14px; margin-bottom: 8px; }
+    .contact-card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+    a.link { color: var(--accent); text-decoration: none; }
+    a.link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo-wrap">
+    <div class="logo-icon">💰</div>
+    <div class="logo-name">Finanzas<span>Plus</span></div>
+  </div>
+  <div class="badge">Documento legal</div>
+  <h1>Política de Privacidad</h1>
+  <p>Última actualización: 15 de marzo de 2026 · Versión 1.0</p>
+</header>
+
+<div class="container">
+
+  <div class="intro-card">
+    <div class="icon">🔒</div>
+    <p>FinanzasPlus almacena tus datos financieros <strong style="color:#a7f3c5">primero en tu dispositivo</strong>. Si decides conectar tu cuenta Google, usamos Firebase (de Google) únicamente para hacer respaldo y sincronización opcionales. Nunca vendemos tu información ni la usamos con fines publicitarios.</p>
+  </div>
+
+  <section>
+    <h2><span class="num">1</span> Quiénes somos</h2>
+    <p>FinanzasPlus es una aplicación móvil de gestión de finanzas personales desarrollada por <span class="highlight">New Reboot</span>. Esta política explica cómo recopilamos, usamos y protegemos la información cuando usas nuestra app.</p>
+    <p>Al usar FinanzasPlus aceptas los términos descritos en esta política. Si no estás de acuerdo, puedes usar la app en modo local sin crear una cuenta.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">2</span> Información que recopilamos</h2>
+
+    <div class="card">
+      <h3><span class="dot"></span> Datos que tú ingresas</h3>
+      <ul>
+        <li>Nombres y montos de cajas (cuentas), ingresos y gastos</li>
+        <li>Presupuestos mensuales y metas de ahorro</li>
+        <li>Cuentas por cobrar y por pagar</li>
+        <li>Categorías personalizadas</li>
+        <li>Configuración de la app (tema, PIN, preferencias)</li>
+      </ul>
+      <p style="margin-top:10px; font-size:13px;">Todos estos datos se guardan <span class="tag">localmente</span> en tu dispositivo usando SQLite. Si activas la sincronización cloud, se copian también a tu espacio privado en Firestore.</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="dot"></span> Datos de tu cuenta Google (si la conectas)</h3>
+      <ul>
+        <li>Dirección de correo electrónico</li>
+        <li>Nombre y foto de perfil (si Google los tiene disponibles)</li>
+        <li>Token de autenticación (gestionado por Firebase Auth)</li>
+      </ul>
+      <p style="margin-top:10px; font-size:13px;">Esta información solo se usa para identificar tu espacio de backup y mostrarte tu perfil dentro de la app. <span class="highlight">No tenemos acceso a tu contraseña de Google.</span></p>
+    </div>
+
+    <div class="card">
+      <h3><span class="dot"></span> Datos técnicos mínimos</h3>
+      <ul>
+        <li>Versión de la app y del sistema operativo (para diagnósticos)</li>
+        <li>Timestamps de última sincronización</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">3</span> Cómo usamos tu información</h2>
+    <div class="card">
+      <ul>
+        <li>Almacenar y mostrar tu información financiera dentro de la app</li>
+        <li>Sincronizar tus datos entre tus dispositivos (si usas cuenta)</li>
+        <li>Restaurar tus datos después de instalar la app en un nuevo dispositivo</li>
+        <li>Identificar tu sesión y proteger tu espacio cloud</li>
+        <li>Enviarte recordatorios locales de vencimientos (sin pasar por internet)</li>
+      </ul>
+    </div>
+    <p><strong style="color:var(--text)">No usamos tus datos</strong> para publicidad, análisis de mercado, perfiles de comportamiento ni los compartimos con terceros con fines comerciales.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">4</span> Terceros que intervienen</h2>
+
+    <div class="card">
+      <h3><span class="dot"></span> Firebase (Google LLC)</h3>
+      <p>Usamos Firebase Authentication y Cloud Firestore para autenticación y sincronización cloud. Google procesa tu correo, nombre y foto de perfil (si los tienes configurados) como parte del flujo de inicio de sesión.</p>
+      <p style="margin-top:8px;">→ <a class="link" href="https://firebase.google.com/support/privacy" target="_blank">Política de privacidad de Firebase</a></p>
+    </div>
+
+    <div class="card">
+      <h3><span class="dot"></span> Google Sign-In</h3>
+      <p>El acceso a tu cuenta Google está gestionado íntegramente por los servidores de Google. FinanzasPlus nunca ve ni almacena tu contraseña de Google.</p>
+      <p style="margin-top:8px;">→ <a class="link" href="https://policies.google.com/privacy" target="_blank">Política de privacidad de Google</a></p>
+    </div>
+
+    <div class="card">
+      <h3><span class="dot"></span> Google Play Billing</h3>
+      <p>Si adquieres FinanzasPlus Pro, la transacción la procesa Google Play directamente. No almacenamos datos de tarjeta ni información bancaria.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">5</span> Dónde se almacenan tus datos</h2>
+    <div class="card">
+      <ul>
+        <li><strong style="color:var(--text)">Modo local:</strong> toda la información permanece en la base de datos SQLite de tu dispositivo</li>
+        <li><strong style="color:var(--text)">Modo cloud (opcional):</strong> se replica en Cloud Firestore, en un documento privado identificado por tu UID de Firebase, protegido con reglas de seguridad que solo permiten acceso a tu cuenta</li>
+        <li>Los datos en Firestore se almacenan en servidores de Google, principalmente en <strong style="color:var(--text)">us-central1 (Iowa, EE.UU.)</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">6</span> Seguridad</h2>
+    <p>Tomamos medidas razonables para proteger tu información:</p>
+    <div class="card">
+      <ul>
+        <li>Reglas de seguridad en Firestore que impiden acceso cruzado entre usuarios</li>
+        <li>Autenticación gestionada por Firebase Auth con tokens seguros</li>
+        <li>Opción de PIN y/o biometría local para bloquear el acceso a la app</li>
+        <li>Almacenamiento seguro de sesión usando <code>flutter_secure_storage</code></li>
+        <li>Comunicación cifrada HTTPS/TLS con todos los servicios de Firebase</li>
+      </ul>
+    </div>
+    <p>Ningún sistema es 100% infalible. En caso de brecha de seguridad que afecte tus datos, te notificaremos de manera oportuna.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">7</span> Tus derechos</h2>
+    <div class="card">
+      <ul>
+        <li><strong style="color:var(--text)">Acceso:</strong> puedes ver toda tu información dentro de la app en cualquier momento</li>
+        <li><strong style="color:var(--text)">Exportación:</strong> puedes hacer backup local o exportar reportes en PDF</li>
+        <li><strong style="color:var(--text)">Eliminación:</strong> puedes eliminar tu cuenta desde Ajustes; esto borra tus datos de Firestore</li>
+        <li><strong style="color:var(--text)">Portabilidad:</strong> puedes hacer backup y restaurar tu base de datos local en cualquier momento</li>
+        <li><strong style="color:var(--text)">Revocación de acceso:</strong> puedes desconectar tu cuenta Google desde la app o desde la configuración de tu cuenta Google</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">8</span> Retención de datos</h2>
+    <p>Tus datos locales persisten hasta que desinstales la app o los elimines manualmente. Los datos en Firestore se conservan mientras tu cuenta esté activa. Si eliminas tu cuenta desde la app, se eliminan los datos de Firestore asociados a tu UID.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">9</span> Menores de edad</h2>
+    <p>FinanzasPlus no está dirigida a menores de 13 años. No recopilamos conscientemente información de menores. Si eres padre/tutor y crees que tu hijo ha proporcionado información, contáctanos para eliminarla.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">10</span> Cambios a esta política</h2>
+    <p>Podemos actualizar esta política cuando sea necesario. Te notificaremos mediante un aviso en la app o en esta página. La fecha de "última actualización" siempre refleja la versión vigente.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <section>
+    <h2>Contacto</h2>
+    <div class="contact-card">
+      <p>¿Preguntas sobre privacidad o protección de datos?</p>
+      <a href="mailto:newrebootdev@gmail.com">newrebootdev@gmail.com</a>
+      <p style="margin-top:12px; font-size:12px;">También puedes abrir un issue en nuestro repositorio de GitHub</p>
+    </div>
+  </section>
+
+  <p style="margin-top:32px; font-size:12px; text-align:center;">
+    <a class="link" href="./terms.html">→ Ver Términos de Uso</a>
+  </p>
+
+</div>
+
+<footer class="footer">
+  © 2026 New Reboot · FinanzasPlus v3.x · Todos los derechos reservados
+</footer>
+
+</body>
+</html>

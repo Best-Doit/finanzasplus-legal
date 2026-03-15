@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Términos de Uso – FinanzasPlus</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2a2d3e;
+      --text: #e8eaf0;
+      --text-muted: #8b90a8;
+      --accent: #0ea5e9;
+      --accent-soft: rgba(14,165,233,0.12);
+      --amber: #f59e0b;
+      --amber-soft: rgba(245,158,11,0.1);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 24px 24px;
+      text-align: center;
+    }
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .logo-icon {
+      width: 48px; height: 48px;
+      background: var(--accent-soft);
+      border: 1.5px solid var(--accent);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+    }
+    .logo-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+    .logo-name span { color: var(--accent); }
+    .badge {
+      display: inline-block;
+      background: var(--amber-soft);
+      border: 1px solid var(--amber);
+      color: var(--amber);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 99px;
+      margin-bottom: 12px;
+    }
+    .header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      margin-bottom: 8px;
+    }
+    .header p { color: var(--text-muted); font-size: 13px; }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+    .intro-card {
+      background: var(--amber-soft);
+      border: 1px solid rgba(245,158,11,0.25);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-bottom: 32px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .intro-card .icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+    .intro-card p { font-size: 14px; color: #fde68a; }
+    section { margin-bottom: 36px; }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2 .num {
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    p { color: var(--text-muted); margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-bottom: 14px;
+    }
+    .card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card h3 .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .card p { font-size: 13.5px; }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+    ul li {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    ul li:last-child { border-bottom: none; }
+    ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 12px;
+    }
+    .highlight { color: var(--text); font-weight: 500; }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      text-align: center;
+    }
+    .contact-card p { font-size: 14px; margin-bottom: 8px; }
+    .contact-card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+    a.link { color: var(--accent); text-decoration: none; }
+    a.link:hover { text-decoration: underline; }
+    .pro-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 6px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo-wrap">
+    <div class="logo-icon">💰</div>
+    <div class="logo-name">Finanzas<span>Plus</span></div>
+  </div>
+  <div class="badge">Documento legal</div>
+  <h1>Términos de Uso</h1>
+  <p>Última actualización: 15 de marzo de 2026 · Versión 1.0</p>
+</header>
+
+<div class="container">
+
+  <div class="intro-card">
+    <div class="icon">📋</div>
+    <p>Al descargar o usar FinanzasPlus aceptas estos términos. Léelos con calma. Si tienes dudas, escríbenos antes de usar la app. La sección más importante: <strong style="color:#fde68a">FinanzasPlus es una herramienta de registro; las decisiones financieras son siempre tuyas.</strong></p>
+  </div>
+
+  <section>
+    <h2><span class="num">1</span> Aceptación de los términos</h2>
+    <p>Al instalar, abrir o usar FinanzasPlus en cualquiera de sus versiones (gratuita o Pro) estás aceptando estos Términos de Uso y nuestra <a class="link" href="./privacy-policy.html">Política de Privacidad</a>.</p>
+    <p>Si no estás de acuerdo, no uses la aplicación. Puedes desinstalarla en cualquier momento.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">2</span> Qué es FinanzasPlus</h2>
+    <p>FinanzasPlus es una aplicación móvil de <span class="highlight">registro y visualización de finanzas personales</span>. Sus funciones principales incluyen:</p>
+    <div class="card">
+      <ul>
+        <li>Registro de cajas (cuentas), ingresos y gastos</li>
+        <li>Presupuestos mensuales y metas de ahorro</li>
+        <li>Cuentas por cobrar y por pagar</li>
+        <li>Reportes y exportación en PDF</li>
+        <li>Recordatorios de vencimientos</li>
+        <li>Sincronización cloud opcional (requiere cuenta Google)</li>
+      </ul>
+    </div>
+    <p>FinanzasPlus <strong class="highlight">no es</strong> un servicio bancario, una plataforma de inversiones ni un asesor financiero. No tiene acceso a cuentas bancarias reales ni ejecuta transacciones económicas.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">3</span> Plan gratuito y FinanzasPlus Pro <span class="pro-badge">PRO</span></h2>
+
+    <div class="card">
+      <h3><span class="dot"></span> Plan gratuito (sin costo)</h3>
+      <ul>
+        <li>Acceso completo a todos los módulos financieros</li>
+        <li>Almacenamiento local ilimitado en tu dispositivo</li>
+        <li>Backup y restauración local</li>
+        <li>Reportes básicos y exportación PDF</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3><span class="dot"></span> FinanzasPlus Pro (pago único o suscripción)</h3>
+      <ul>
+        <li>Sincronización cloud entre dispositivos</li>
+        <li>Backup automático en la nube</li>
+        <li>Restauración cloud en nuevos dispositivos</li>
+        <li>Reportes avanzados y análisis adicionales</li>
+        <li>Soporte prioritario</li>
+      </ul>
+      <p style="margin-top:10px; font-size:13px;">La compra de Pro se procesa exclusivamente a través de Google Play. No almacenamos datos de pago. Los términos de reembolso de Google Play aplican.</p>
+    </div>
+
+    <p>Las características exactas del plan Pro pueden cambiar. Cualquier cambio que afecte a usuarios actuales Pro se comunicará con antelación.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">4</span> Uso permitido</h2>
+    <p>Puedes usar FinanzasPlus para gestionar tus finanzas personales o familiares. Al usar la app te comprometes a:</p>
+    <div class="card">
+      <ul>
+        <li>No intentar acceder a datos de otros usuarios</li>
+        <li>No usar la app para actividades ilegales, lavado de dinero u otras actividades que violen leyes locales o internacionales</li>
+        <li>No intentar revertir, descompilar o modificar el código de la app</li>
+        <li>No usar la app de forma que pueda dañar, deshabilitar o sobrecargar nuestros servicios</li>
+        <li>No intentar eludir las medidas de seguridad de la app o de Firebase</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">5</span> Tu cuenta y tus datos</h2>
+    <p>Si creas una cuenta Google para sincronización, eres responsable de mantener la seguridad de tu cuenta de Google. Todas las entradas de datos financieros que hagas en la app son tuyas y permanecen bajo tu control.</p>
+    <p>Nos reservamos el derecho de suspender cuentas que violen estos términos, notificándote previamente salvo en casos de violación grave o actividad ilegal.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">6</span> Descargo de responsabilidad</h2>
+    <div class="card">
+      <p>FinanzasPlus es una herramienta de <span class="highlight">apoyo al registro</span>. No reemplaza la asesoría de un contador, planificador financiero o institución bancaria.</p>
+      <p style="margin-top:8px;">New Reboot no se hace responsable de:</p>
+      <ul>
+        <li>Pérdidas financieras derivadas de decisiones tomadas con base en los datos registrados en la app</li>
+        <li>Errores de cálculo causados por datos incorrectamente ingresados por el usuario</li>
+        <li>Pérdida de datos por fallo del dispositivo o desinstalación sin backup previo</li>
+        <li>Interrupciones del servicio cloud por mantenimiento o fallas de Firebase/Google</li>
+      </ul>
+    </div>
+    <p>La app se provee <strong class="highlight">"tal como está"</strong> sin garantías implícitas de funcionamiento continuo o libre de errores.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">7</span> Propiedad intelectual</h2>
+    <p>FinanzasPlus, su código, diseño, marca y logotipos son propiedad de New Reboot. El uso de la app no te otorga derechos de propiedad sobre ninguno de estos elementos.</p>
+    <p>Los datos que ingresas en la app son tuyos. No reclamamos ningún derecho sobre tu información financiera personal.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">8</span> Disponibilidad del servicio</h2>
+    <p>Nos esforzamos por mantener la app funcionando, pero no garantizamos disponibilidad ininterrumpida. Podemos realizar mantenimiento, actualizaciones o descontinuar funciones avisando con anticipación razonable.</p>
+    <p>En el caso improbable de que decidamos descontinuar la app, publicaremos un aviso con al menos 30 días de anticipación para que puedas hacer backup de tus datos.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">9</span> Cambios a estos términos</h2>
+    <p>Podemos actualizar estos términos cuando sea necesario. Los cambios importantes se notificarán dentro de la app. Continuar usando la app después de la notificación implica aceptación de los nuevos términos.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">10</span> Ley aplicable</h2>
+    <p>Estos términos se rigen por las leyes aplicables al lugar donde opera New Reboot. Para resolver disputas, ambas partes preferirán primero la resolución amistosa por correo electrónico.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <section>
+    <h2>Contacto</h2>
+    <div class="contact-card">
+      <p>¿Preguntas, reportes o solicitudes legales?</p>
+      <a href="mailto:newrebootdev@gmail.com">newrebootdev@gmail.com</a>
+      <p style="margin-top:12px; font-size:12px;">Respondemos en un plazo máximo de 5 días hábiles</p>
+    </div>
+  </section>
+
+  <p style="margin-top:32px; font-size:12px; text-align:center;">
+    <a class="link" href="./privacy-policy.html">← Ver Política de Privacidad</a>
+  </p>
+
+</div>
+
+<footer class="footer">
+  © 2026 New Reboot · FinanzasPlus v3.x · Todos los derechos reservados
+</footer>
+
+</body>
+</html>
